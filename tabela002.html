@@ -34,6 +34,29 @@
             background-color: lightgray;
 
         }
+        /* Efeito Zebra
+            tdoby > tr - Todo tr que é filho do tdoby
+            pseudo-classe tr:nth-child(2n) - Todo filho atualizando no intervalo de 2 linhas.
+            Outros exemplos:
+            3n - de 3 em 3 linhas;
+            2n-1 - Vai iniciar na primeira linha;
+            odd - Linhas impares;
+            even - Linhas pares;
+
+            Posso também personalisar somente as pares ou impares.
+
+            tbody > tr:nth-child(odd) {
+                background-color: blue;
+            }
+                
+            tbody > tr:nth-child(even) {
+                background-color: yellow;
+            }
+        */
+        tbody > tr:nth-child(2n) {
+            background-color: gray;
+
+        }
     </style>
 </head>
 <body>
