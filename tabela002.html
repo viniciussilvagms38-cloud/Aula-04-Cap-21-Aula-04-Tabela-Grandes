@@ -10,7 +10,7 @@
         }
         table {
             width: 500px;
-            border-collapse: ;
+            border-collapse: collapse ;
         }
         td, th {
             border: 1px solid black;
@@ -23,12 +23,24 @@
         td.num {
             text-align: right;
         }
+        caption {
+            /* Tamanho da fonte */
+            font-size: 1.5em;
+            /* Para colocar em negrito */
+            font-weight: bold;
+            /* Para deixar mais espaçado */
+            padding: 10px;
+            /*  */
+            background-color: lightgray;
+
+        }
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- Anatomia para tabelas grandes 
         Table
+            Caption - Legenda da tabela
             Thead - cabeça
                 TR, TD, TH
             Tbody - corpo
@@ -37,10 +49,17 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <!-- Importante colocar o Escopo do título 
+                    col - colunas
+                    row - linhas 
+                -->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px">População</th>
             </tr>
 
         </thead>
@@ -64,7 +83,7 @@
             <tr>
                 <td>Paraná</td>
                 <td class="num">11 824 665</td>
-            </tr>[
+            </tr>
             <tr>
                 <td>Rio Grande do Sul</td>
                 <td class="num">11 229 915</td>
@@ -72,7 +91,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>122.420.654</strong></td>
             </tr>
 
